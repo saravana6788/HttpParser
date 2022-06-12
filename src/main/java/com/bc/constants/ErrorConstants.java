@@ -1,5 +1,9 @@
 package com.bc.constants;
 
+/**
+ * Contains the error constants for the application
+ *
+ */
 public class ErrorConstants {
 
     public static final String EMPTY_RESPONSE_ERROR_MESSAGE = "Empty Response";

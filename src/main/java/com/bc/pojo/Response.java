@@ -2,6 +2,9 @@ package com.bc.pojo;
 
 import java.util.Hashtable;
 
+/**
+ * POJO class that holds the necessary fields extracted from the HTTP Response
+ */
 public class Response {
     private String httpVersion;
     private int httpStatusCode;

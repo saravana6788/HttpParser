@@ -13,13 +13,14 @@ import java.util.List;
 
 public class Main {
 
+    public static final String FILE_PATH = "./src/main/java/com/bc/file/content.txt";
     public static void main(String[] args) {
 
         BufferedReader reader;
         String currentLine;
         List<String> httpLines = new ArrayList<>();
         try{
-            reader = new BufferedReader(new FileReader("./src/main/java/com/bc/file/content.txt"));
+            reader = new BufferedReader(new FileReader(FILE_PATH));
             while((currentLine = reader.readLine()) != null){
                 httpLines.add(currentLine);
             }
