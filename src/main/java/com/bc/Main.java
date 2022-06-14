@@ -3,6 +3,7 @@ package com.bc;
 import com.bc.exception.EmptyResponseException;
 import com.bc.exception.InvalidStatusLineException;
 import com.bc.parser.HttpParser;
+import com.bc.parser.HttpParserImpl;
 import com.bc.pojo.Response;
 
 import java.io.BufferedReader;
@@ -25,7 +26,7 @@ public class Main {
                 httpLines.add(currentLine);
             }
 
-            HttpParser parser = new HttpParser();
+            HttpParser parser = new HttpParserImpl();
             Response response = parser.parseResponse(httpLines);
             System.out.printf("HTTP version: %s%n",response.getHttpVersion());
             System.out.printf("Status: %d%n",response.getHttpStatusCode());

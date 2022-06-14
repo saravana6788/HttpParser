@@ -12,12 +12,12 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HttpParserTest {
+class HttpParserImplTest {
 
     private HttpParser parser;
     @BeforeEach
     void setUp() {
-        parser = new HttpParser();
+        parser = new HttpParserImpl();
     }
 
     @AfterEach
@@ -66,6 +66,7 @@ class HttpParserTest {
         assertEquals(302, response.getHttpStatusCode());
     }
 
+
     @Test
     void noHttpStatusReasonTest() throws Exception {
         List<String> httpLines = new ArrayList<>();
@@ -74,7 +75,7 @@ class HttpParserTest {
         assertEquals(0, response.getHeaders().size());
         assertEquals("1.1", response.getHttpVersion());
         assertEquals(302, response.getHttpStatusCode());
-        assertEquals(null,response.getHttpStatusReason());
+        assertNull(response.getHttpStatusReason());
     }
 
 
