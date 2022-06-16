@@ -44,7 +44,7 @@ public class HttpParserImpl implements HttpParser {
      * @param httpLines List contains the lines in the HTTP response split by newLine character
      * @return boolean value indicating if the status line is valid
      */
-    public boolean validateStatusLine(List<String> httpLines) {
+    private boolean validateStatusLine(List<String> httpLines) {
         String statusLine = httpLines.get(0);
         if (!statusLine.matches(STATUS_LINE_REGEX)) {
             return false;
